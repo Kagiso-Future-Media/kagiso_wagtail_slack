@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='kagiso_wagtail_slack',
-    version='0.0.2',
+    version='0.0.3',
     author='Kagiso Media',
     author_email='development@kagiso.io',
     description='Kagiso Wagtail Slack',

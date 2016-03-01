@@ -26,7 +26,7 @@ def send_to_slack(sender, **kwargs):
         ]
     }
 
-    if instance.cover_image:
+    if instance.getattr('cover_image', None):
         payload['attachments'][0]['image_url'] = instance.cover_image.get_rendition('fill-100x100').url  # noqa
     timeout_seconds = 3
 
