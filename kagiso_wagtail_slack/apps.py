@@ -1,7 +1,7 @@
 from django.apps import AppConfig
 
 
-class CoreConfig(AppConfig):
+class KagisoWagtailSlackConfig(AppConfig):
     name = 'kagiso_wagtail_slack'
     verbose_name = 'Kagiso Wagtail Slack'
 
