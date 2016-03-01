@@ -21,13 +21,21 @@ def send_to_slack(sender, **kwargs):
             {
                 'title': instance.title,
                 'title_link': instance.url,
-                'text': BeautifulSoup(instance.summary, 'html5lib').getText()
             }
         ]
     }
+    if getattr(instance, 'summary', None):
+        payload['attachments'][0]['text'] = BeautifulSoup(
+            instance.summary,
+            'html5lib'
+        ).getText()
 
-    if instance.getattr('cover_image', None):
-        payload['attachments'][0]['image_url'] = instance.cover_image.get_rendition('fill-100x100').url  # noqa
+    if getattr(instance, 'cover_image', None):
+        payload['attachments'][0]['image_url'] = instance \
+            .cover_image \
+            .get_rendition('fill-100x100') \
+            .url
+
     timeout_seconds = 3
 
     try:
