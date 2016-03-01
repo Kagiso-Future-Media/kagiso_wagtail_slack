@@ -16,10 +16,7 @@ def send_to_slack(sender, **kwargs):
     instance = kwargs['instance']
     webhook_url = settings.SLACK_PAGE_PUBLISHED_WEBHOOK
     payload = {
-        'text': '{0} was published by {1}'.format(
-            instance.title,
-            instance.owner.username
-        ),
+        'text': '{0} was published.'.format(instance.title),
         'attachments': [
             {
                 'title': instance.title,
