@@ -1,19 +1,10 @@
-# kagiso_wagtail_sitemap
-Postgres fulltext search for Wagtail
+# kagiso_wagtail_slack
+Notify Slack via a web hook when a page has been published
 
 ## Installation
-`pip install kagiso_wagtail_sitemap`
+`pip install kagiso_wagtail_slack`
 
-Add `kagiso_wagtail_sitemap` to your `INSTALLED_APPS` in your `settings.py`.
+Add your Slack webhook as SLACK_PAGE_PUBLISHED_WEBHOOK in your settings.py
 
-`python manage.py migrate`
+Add `kagiso_wagtail_slack.apps.KagisoWagtailSlackConfig` to your `INSTALLED_APPS` in your `settings.py`.
 
-Add the following to `urls.py`:
-```py
-from kagiso_wagtail_sitemap.views import search as search_view
-
-url(r'^search/', search_view, name='search'),
-```
-Make sure that there is a search template at
-`kagiso_wagtail_sitemap/search_results.html` in your templates folder
-(see a sample below).
