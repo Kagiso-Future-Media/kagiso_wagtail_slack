@@ -10,11 +10,11 @@ django-compressor==2.0    # via wagtail
 django-modelcluster==1.1  # via wagtail
 django-taggit==0.18.0     # via wagtail
 django-treebeard==3.0     # via wagtail
-django==1.8.9
+django==1.10.5
 djangorestframework==3.3.2  # via wagtail
 flake8-import-order==0.6.1
 flake8==2.5.2
-html5lib==0.9999999       # via wagtail
+html5lib==0.999999        # via wagtail
 mccabe==0.4.0             # via flake8
 pep8-naming==0.3.3
 pep8==1.7.0               # via flake8, flake8-import-order
@@ -25,5 +25,5 @@ rcssmin==1.0.6            # via django-compressor
 rjsmin==1.0.12            # via django-compressor
 six==1.10.0               # via django-appconf, html5lib, willow
 Unidecode==0.4.19         # via wagtail
-wagtail==1.3.1
+wagtail==1.6.3
 Willow==0.2.2             # via wagtail
